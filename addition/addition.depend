@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1399888200 source:c:\users\sya\desktop\projectscpp\addition\main.cpp
+	<iostream>
+
+1399908920 source:c:\users\sya\desktop\learningcpp\addition\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<string>
+
