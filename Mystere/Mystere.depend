@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1399972472 source:c:\users\sya\desktop\projectscpp\mystere\main.cpp
+	<iostream>
+	<string>
+	<ctime>
+	<cstdlib>
+	<fstream>
+
