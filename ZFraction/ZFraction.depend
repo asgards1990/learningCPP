@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1400159254 source:c:\users\sya\desktop\learningcpp\zfraction\main.cpp
+	<iostream>
+	"ZFraction.h"
+
+1400159188 c:\users\sya\desktop\learningcpp\zfraction\include\zfraction.h
+	<iostream>
+
+1400159202 source:c:\users\sya\desktop\learningcpp\zfraction\src\zfraction.cpp
+	"ZFraction.h"
+	<iostream>
+
