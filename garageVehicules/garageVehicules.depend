@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1400501890 source:c:\users\sya\desktop\learningcpp\garagevehicules\main.cpp
+	<iostream>
+	<Vehicule.h>
+	<Voiture.h>
+	<Moto.h>
+	<Camion.h>
+	<vector>
+	<Garages.h>
+
+1400500569 c:\users\sya\desktop\learningcpp\garagevehicules\include\vehicule.h
+	<iostream>
+
+1400500504 c:\users\sya\desktop\learningcpp\garagevehicules\include\voiture.h
+	<Vehicule.h>
+
+1400499647 c:\users\sya\desktop\learningcpp\garagevehicules\include\moto.h
+	<Vehicule.h>
+
+1400499491 c:\users\sya\desktop\learningcpp\garagevehicules\include\camion.h
+	<Vehicule.h>
+
+1400499766 source:c:\users\sya\desktop\learningcpp\garagevehicules\src\camion.cpp
+	"Camion.h"
+
+1400499754 source:c:\users\sya\desktop\learningcpp\garagevehicules\src\moto.cpp
+	"Moto.h"
+
+1400498757 source:c:\users\sya\desktop\learningcpp\garagevehicules\src\vehicule.cpp
+	"Vehicule.h"
+
+1400499126 source:c:\users\sya\desktop\learningcpp\garagevehicules\src\voiture.cpp
+	"Voiture.h"
+
+1400501920 c:\users\sya\desktop\learningcpp\garagevehicules\include\garages.h
+	<Vehicule.h>
+	<vector>
+
+1400501880 source:c:\users\sya\desktop\learningcpp\garagevehicules\src\garages.cpp
+	"Garages.h"
+
