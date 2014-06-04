@@ -1,6 +1,7 @@
 SOURCES += \
     main.cpp \
-    mafenetre.cpp
+    mafenetre.cpp \
+    fenetrelayout.cpp
 
 QT += widgets
 
@@ -8,4 +9,5 @@ SOURCES += \
     main.cpp
 
 HEADERS += \
-    mafenetre.h
+    mafenetre.h \
+    fenetrelayout.h
