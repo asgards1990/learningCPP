@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QGridLayout>
+#include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QApplication>
 #include <QGroupBox>
@@ -12,6 +13,9 @@
 #include <QDateEdit>
 #include <QTextEdit>
 #include <QDate>
+#include <QPushButton>
+#include <QMessageBox>
+#include "fencodegenere.h"
 
 class FenPrincipale : public QWidget
 {
@@ -23,9 +27,20 @@ public:
 signals:
 
 public slots:
+     void generateCode();
 
 private:
-     QVBoxLayout *m_layoutPrincipal;
+     QLineEdit *name;
+     QLineEdit *motherClass;
+     QCheckBox *header;
+     QCheckBox *constructeur;
+     QCheckBox *destructeur;
+     QGroupBox *groupCommentaires;
+     QLineEdit *auteur;
+     QDateEdit *date;
+     QTextEdit *role;
+     QPushButton *generate;
+     QPushButton *quitter;
 
 };
 

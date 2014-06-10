@@ -1,21 +1,32 @@
 #include "fencodegenere.h"
 
-FenCodeGenere::FenCodeGenere(QString *nom, QString *mother, bool commentaires, QString *auteur, QDate *date, QString *role,
-                             bool option1, bool option2 , bool option3) :
-    QWidget()
+FenCodeGenere::FenCodeGenere(QString *code,QString *bodyCode,QString *nameClass, QWidget *parent) :
+    QDialog(parent)
 {
 
-    QTextEdit *code = new QTextEdit;
-    QVBoxLayout *m_layoutGenere = new QVBoxLayout(this);
 
-    if (commentaires)
-    {
-        code->setText("/* \nAuteur : " + *auteur + "\nDate de création :  " + date->toString() + "\nRôle :" + *role + "\n*/" );
 
-        m_layoutGenere->addWidget(code);
-        setLayout(m_layoutGenere);
+    QVBoxLayout *layoutPrincipal = new QVBoxLayout;
+    QTabWidget *tabs = new QTabWidget;
 
-    }
+    header = new QTextEdit;
+    header->setText(*code);
+
+    body = new QTextEdit;
+    body->setText(*bodyCode);
+
+    tabs->addTab(header,*nameClass+".h");
+    tabs->addTab(body,*nameClass+".cpp");
+
+    fermer = new QPushButton;
+    fermer->setText("Fermer");
+
+    layoutPrincipal->addWidget(tabs);
+    layoutPrincipal->addWidget(fermer);
+    QObject::connect(fermer,SIGNAL(clicked()),this,SLOT(accept()));
+
+    setLayout(layoutPrincipal);
+
 
 
 }

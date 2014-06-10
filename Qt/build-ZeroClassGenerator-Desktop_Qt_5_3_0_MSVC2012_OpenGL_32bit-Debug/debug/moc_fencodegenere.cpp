@@ -60,7 +60,7 @@ void FenCodeGenere::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
 }
 
 const QMetaObject FenCodeGenere::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_FenCodeGenere.data,
+    { &QDialog::staticMetaObject, qt_meta_stringdata_FenCodeGenere.data,
       qt_meta_data_FenCodeGenere,  qt_static_metacall, 0, 0}
 };
 
@@ -75,12 +75,12 @@ void *FenCodeGenere::qt_metacast(const char *_clname)
     if (!_clname) return 0;
     if (!strcmp(_clname, qt_meta_stringdata_FenCodeGenere.stringdata))
         return static_cast<void*>(const_cast< FenCodeGenere*>(this));
-    return QWidget::qt_metacast(_clname);
+    return QDialog::qt_metacast(_clname);
 }
 
 int FenCodeGenere::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     return _id;

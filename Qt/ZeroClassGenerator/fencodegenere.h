@@ -2,32 +2,30 @@
 #define FENCODEGENERE_H
 
 #include <QWidget>
-#include <QGridLayout>
+#include <QDialog>
 #include <QVBoxLayout>
 #include <QApplication>
-#include <QGroupBox>
 #include <QLineEdit>
-#include <QLabel>
-#include <QCheckBox>
-#include <QDateEdit>
-#include <QTextEdit>
-#include <QDate>
 #include <QString>
+#include <QTextEdit>
+#include <QPushButton>
+#include <QTabWidget>
 
-class FenCodeGenere : public QWidget
+class FenCodeGenere : public QDialog
 {
     Q_OBJECT
 
 public:
-    FenCodeGenere(QString *nom, QString *mother, bool commentaires=false, QString *auteur=0, QDate *date=0,QString *role=0,
-                  bool option1=true, bool option2=true , bool option3=false);
+    FenCodeGenere(QString *codeGenere, QString *bodyCode, QString *nameClass, QWidget *parent=0);
 
 signals:
 
 public slots:
 
 private:
-    QVBoxLayout *m_layoutGenere;
+    QTextEdit *header;
+    QTextEdit *body;
+    QPushButton *fermer;
 
 };
 

@@ -63,26 +63,6 @@ DESTDIR_TARGET = release\ZeroClassGenerator.exe
 
 .SUFFIXES: .c .cpp .cc .cxx
 
-{.}.cpp{release\}.obj::
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
-	$<
-<<
-
-{.}.cc{release\}.obj::
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
-	$<
-<<
-
-{.}.cxx{release\}.obj::
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
-	$<
-<<
-
-{.}.c{release\}.obj::
-	$(CC) -c $(CFLAGS) $(INCPATH) -Forelease\ @<<
-	$<
-<<
-
 {release}.cpp{release\}.obj::
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
 	$<
@@ -99,6 +79,26 @@ DESTDIR_TARGET = release\ZeroClassGenerator.exe
 <<
 
 {release}.c{release\}.obj::
+	$(CC) -c $(CFLAGS) $(INCPATH) -Forelease\ @<<
+	$<
+<<
+
+{.}.cpp{release\}.obj::
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
+	$<
+<<
+
+{.}.cc{release\}.obj::
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
+	$<
+<<
+
+{.}.cxx{release\}.obj::
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -Forelease\ @<<
+	$<
+<<
+
+{.}.c{release\}.obj::
 	$(CC) -c $(CFLAGS) $(INCPATH) -Forelease\ @<<
 	$<
 <<
@@ -268,6 +268,7 @@ release\moc_fenprincipale.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QWidg
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlayoutitem.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QHBoxLayout \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QVBoxLayout \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QApplication \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qapplication.h \
@@ -302,6 +303,14 @@ release\moc_fenprincipale.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QWidg
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractscrollarea.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextdocument.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QDate \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QPushButton \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMessageBox \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdialog.h \
+		..\ZeroClassGenerator\fencodegenere.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QDialog \
+		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QString \
 		..\ZeroClassGenerator\fenprincipale.h
 	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -IC:/Users/sya/Desktop/learningCPP/Qt/ZeroClassGenerator -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\ZeroClassGenerator\fenprincipale.h -o release\moc_fenprincipale.cpp
 
@@ -405,12 +414,13 @@ release\moc_fencodegenere.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QWidg
 		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qfiledevice.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qvector2d.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtouchdevice.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QGridLayout \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QDialog \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdialog.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qgridlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QApplication \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qapplication.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qcoreapplication.h \
@@ -418,32 +428,22 @@ release\moc_fencodegenere.cpp: C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QWidg
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdesktopwidget.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qguiapplication.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qinputmethod.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QGroupBox \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qframe.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QLineEdit \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlineedit.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qframe.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextcursor.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextformat.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qpen.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextoption.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QLabel \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlabel.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QCheckBox \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qcheckbox.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QDateEdit \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdatetimeedit.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qdatetime.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qvalidator.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qregularexpression.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QString \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QTextEdit \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qtextedit.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractscrollarea.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextdocument.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QDate \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QPushButton \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h \
 		..\ZeroClassGenerator\fencodegenere.h
 	C:\Qt\5.3\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.3/msvc2012_opengl/mkspecs/win32-msvc2012 -IC:/Users/sya/Desktop/learningCPP/Qt/ZeroClassGenerator -IC:/Qt/5.3/msvc2012_opengl/include -IC:/Qt/5.3/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.3/msvc2012_opengl/include/QtGui -IC:/Qt/5.3/msvc2012_opengl/include/QtCore -I. ..\ZeroClassGenerator\fencodegenere.h -o release\moc_fencodegenere.cpp
 
@@ -564,12 +564,13 @@ release\main.obj: ..\ZeroClassGenerator\main.cpp ..\ZeroClassGenerator\fencodege
 		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qfiledevice.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qvector2d.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtouchdevice.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QGridLayout \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QDialog \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdialog.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qgridlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QApplication \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qapplication.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qcoreapplication.h \
@@ -577,33 +578,40 @@ release\main.obj: ..\ZeroClassGenerator\main.cpp ..\ZeroClassGenerator\fencodege
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdesktopwidget.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qguiapplication.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qinputmethod.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QGroupBox \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qframe.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QLineEdit \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlineedit.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qframe.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextcursor.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextformat.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qpen.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextoption.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QString \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QTextEdit \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qtextedit.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextdocument.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QPushButton \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h \
+		..\ZeroClassGenerator\fenprincipale.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QGridLayout \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QHBoxLayout \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QGroupBox \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qgroupbox.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QLabel \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlabel.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QCheckBox \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qcheckbox.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QDateEdit \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdatetimeedit.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qdatetime.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractspinbox.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qvalidator.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qregularexpression.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QTextEdit \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qtextedit.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextdocument.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QDate \
-		..\ZeroClassGenerator\fenprincipale.h
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMessageBox \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qmessagebox.h
 
 release\fenprincipale.obj: ..\ZeroClassGenerator\fenprincipale.cpp ..\ZeroClassGenerator\fenprincipale.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QWidget \
@@ -711,6 +719,7 @@ release\fenprincipale.obj: ..\ZeroClassGenerator\fenprincipale.cpp ..\ZeroClassG
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlayoutitem.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QHBoxLayout \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QVBoxLayout \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QApplication \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qapplication.h \
@@ -744,7 +753,15 @@ release\fenprincipale.obj: ..\ZeroClassGenerator\fenprincipale.cpp ..\ZeroClassG
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qtextedit.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractscrollarea.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextdocument.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QDate
+		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QDate \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QPushButton \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QMessageBox \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdialog.h \
+		..\ZeroClassGenerator\fencodegenere.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QDialog \
+		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QString
 
 release\fencodegenere.obj: ..\ZeroClassGenerator\fencodegenere.cpp ..\ZeroClassGenerator\fencodegenere.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QWidget \
@@ -847,12 +864,13 @@ release\fencodegenere.obj: ..\ZeroClassGenerator\fencodegenere.cpp ..\ZeroClassG
 		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qfiledevice.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qvector2d.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtouchdevice.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QGridLayout \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QDialog \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdialog.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qboxlayout.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QVBoxLayout \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qgridlayout.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QApplication \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qapplication.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qcoreapplication.h \
@@ -860,32 +878,22 @@ release\fencodegenere.obj: ..\ZeroClassGenerator\fencodegenere.cpp ..\ZeroClassG
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdesktopwidget.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qguiapplication.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qinputmethod.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QGroupBox \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qgroupbox.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qframe.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QLineEdit \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlineedit.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qframe.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextcursor.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextformat.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qpen.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextoption.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QLabel \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qlabel.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QCheckBox \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qcheckbox.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QDateEdit \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qdatetimeedit.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qdatetime.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qvalidator.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtCore\qregularexpression.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QString \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QTextEdit \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qtextedit.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractscrollarea.h \
 		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qtextdocument.h \
-		C:\Qt\5.3\msvc2012_opengl\include\QtCore\QDate
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\QPushButton \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.3\msvc2012_opengl\include\QtGui\qicon.h
 
 release\moc_fenprincipale.obj: release\moc_fenprincipale.cpp 
 

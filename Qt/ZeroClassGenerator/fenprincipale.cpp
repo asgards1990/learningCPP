@@ -9,8 +9,8 @@ FenPrincipale::FenPrincipale() :
         QGridLayout *layoutClass = new QGridLayout;
         QLabel *labelName= new QLabel;
         QLabel *labelMotherClass = new QLabel;
-        QLineEdit *name = new QLineEdit;
-        QLineEdit *motherClass = new QLineEdit;
+        name = new QLineEdit;
+        motherClass = new QLineEdit;
 
         groupClass->setTitle("Définition de la classe");
         name->setToolTip("Entrez le nom de votre classe");
@@ -29,9 +29,9 @@ FenPrincipale::FenPrincipale() :
 
     QGroupBox *groupOptions= new QGroupBox;
         QVBoxLayout *layoutOptions = new QVBoxLayout;
-        QCheckBox *header = new QCheckBox;
-        QCheckBox *constructeur = new QCheckBox;
-        QCheckBox *destructeur = new QCheckBox;
+        header = new QCheckBox;
+        constructeur = new QCheckBox;
+        destructeur = new QCheckBox;
 
         header->setText("Protéger le header contre les intrusions multiples");
         header->setChecked(true);
@@ -47,14 +47,14 @@ FenPrincipale::FenPrincipale() :
         groupOptions->setLayout(layoutOptions);
         m_layoutPrincipal->addWidget(groupOptions);
 
-    QGroupBox *groupCommentaires= new QGroupBox;
+    groupCommentaires= new QGroupBox;
         QGridLayout *layoutCommentaires = new QGridLayout;
         QLabel *labelAuteur= new QLabel;
         QLabel *labelDate = new QLabel;
         QLabel *labelRole = new QLabel;
-        QLineEdit *auteur = new QLineEdit;
-        QDateEdit *date = new QDateEdit;
-        QTextEdit *role= new QTextEdit;
+        auteur = new QLineEdit;
+        date = new QDateEdit;
+        role= new QTextEdit;
 
         labelAuteur->setText("Auteur : ");
         labelDate->setText("Date de création : ");
@@ -77,5 +77,84 @@ FenPrincipale::FenPrincipale() :
         groupCommentaires->setLayout(layoutCommentaires);
         m_layoutPrincipal->addWidget(groupCommentaires);
 
+    QGroupBox *groupSubmit= new QGroupBox;
+        QHBoxLayout *layoutSubmit = new QHBoxLayout;
+        generate = new QPushButton;
+        quitter = new QPushButton;
+
+        generate->setText("Générer!");
+        quitter->setText("Quitter");
+
+        QObject::connect(generate, SIGNAL(clicked()), this, SLOT(generateCode()));
+        QObject::connect(quitter, SIGNAL(clicked()), qApp, SLOT(quit()));
+
+        layoutSubmit->addWidget(generate);
+        layoutSubmit->addWidget(quitter);
+
+        groupSubmit->setLayout(layoutSubmit);
+        m_layoutPrincipal->addWidget(groupSubmit);
+        m_layoutPrincipal->setAlignment(groupSubmit,Qt::AlignRight);
+
        // setLayout(m_layoutPrincipal);
+}
+
+void FenPrincipale::generateCode()
+{
+
+
+    if ((name->text()).isEmpty())
+        {
+            QMessageBox::critical(this, "Erreur", "Veuillez entrer au moins un nom de classe");
+            return; // Arrêt de la méthode
+        }
+
+    QString *code = new QString;
+    QString *bodyCode = new QString;
+
+    bodyCode->append("#include \"" + name->text() + ".h\"\n\n");
+    if (groupCommentaires->isChecked())
+    {
+
+        code->append("/* \nAuteur : " + auteur->text() + "\nDate de création :  " + (date->date()).toString() + "\n");
+        if(!role->toPlainText().isEmpty())
+        {
+        code->append("\nRôle :\n" + role->toPlainText() + "\n");
+        }
+        code->append( "*/\n\n\n");
+
+    }
+
+    code->append("#ifndef HEADER_" + name->text().toUpper() + "\n#define HEADER_" + name->text().toUpper() + "\n\n\nclass " + name->text());
+
+    bool motherClassEmpty = motherClass->text().isEmpty();
+    if (!motherClassEmpty)
+    {
+        code->append(" : public " + motherClass->text());
+    }
+
+    code->append("\n{\n\n    public:\n");
+
+    if(constructeur->isChecked())
+    {
+        code->append("        "+name->text() +"();\n");
+        bodyCode->append(name->text()+"::"+name->text());
+        if(!motherClassEmpty)
+        {
+            bodyCode->append(" :\n    " + motherClass->text() + "()");
+        }
+        bodyCode->append("\n{\n\n}");
+    }
+
+    if(destructeur->isChecked())
+    {
+        code->append("       ~" + name->text() +"();\n");
+    }
+
+    code->append("\n\n    protected:\n\n\n    private:\n\n\n}");
+
+
+
+
+    FenCodeGenere *fenetreCode=new FenCodeGenere(code, bodyCode, &(name->text()), this);
+    fenetreCode->exec();
 }
