@@ -137,22 +137,21 @@ void FenPrincipale::generateCode()
     if(constructeur->isChecked())
     {
         code->append("        "+name->text() +"();\n");
-        bodyCode->append(name->text()+"::"+name->text());
+        bodyCode->append(name->text()+"::"+name->text() +"()");
         if(!motherClassEmpty)
         {
             bodyCode->append(" :\n    " + motherClass->text() + "()");
         }
-        bodyCode->append("\n{\n\n}");
+        bodyCode->append("\n{\n\n}\n\n");
     }
 
     if(destructeur->isChecked())
     {
         code->append("       ~" + name->text() +"();\n");
+        bodyCode->append(name->text()+"::"+ "~" + name->text() + "()\n{\n\n}\n\n");
     }
 
     code->append("\n\n    protected:\n\n\n    private:\n\n\n}");
-
-
 
 
     FenCodeGenere *fenetreCode=new FenCodeGenere(code, bodyCode, &(name->text()), this);

@@ -1,16 +1,17 @@
 #include <QApplication>
-#include "mafenetre.h"
-#include "fenetrelayout.h"
+#include <QtWidgets>
+#include "FenPrincipale.h"
+
 
 int main(int argc, char *argv[])
 {
+
     QApplication app(argc, argv);
 
-    MaFenetre fenetre;
+    FenPrincipale fenetre;
     fenetre.show();
 
     return app.exec();
 
 }
-
 

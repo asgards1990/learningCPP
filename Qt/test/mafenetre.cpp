@@ -10,6 +10,7 @@ MaFenetre::MaFenetre() : QWidget()
         m_quit->setFont(QFont("Comic Sans MS", 14));
         m_quit->setCursor(Qt::PointingHandCursor);
         m_quit->setIcon(QIcon(QCoreApplication::applicationDirPath() + "\\Smiley.png"));
+        //m_quit->setIcon(QIcon("Smiley.png"));
         m_quit->move(100, 80);
 
 
