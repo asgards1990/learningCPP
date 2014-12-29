@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1419363230 source:c:\users\su.yang\desktop\compare version numbers\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+

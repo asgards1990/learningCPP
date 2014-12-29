@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1418622750 source:c:\users\corpus\desktop\learningcpp\sudoku\sudoku\main.cpp
+	<iostream>
+	<list>
+	"Ensemble.h"
+
+1418622803 source:c:\users\corpus\desktop\learningcpp\sudoku\sudoku\src\ensemble.cpp
+	"Ensemble.h"
+
+1418622936 c:\users\corpus\desktop\learningcpp\sudoku\sudoku\include\ensemble.h
+	<iostream>
+	<list>
+

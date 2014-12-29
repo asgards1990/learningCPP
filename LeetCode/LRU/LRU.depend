@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1419743577 source:c:\users\corpus\desktop\learningcpp\lru\main.cpp
+	<iostream>
+	"LRUCache.h"
+
+1419743252 source:c:\users\corpus\desktop\learningcpp\lru\src\lrucache.cpp
+	"LRUCache.h"
+
+1419745599 c:\users\corpus\desktop\learningcpp\lru\include\lrucache.h
+	<list>
+	<utility>
+	<unordered_map>
+
+1419743577 source:c:\users\corpus\desktop\learningcpp\leetcode\lru\main.cpp
+	<iostream>
+	"LRUCache.h"
+
+1419745599 c:\users\corpus\desktop\learningcpp\leetcode\lru\include\lrucache.h
+	<list>
+	<utility>
+	<unordered_map>
+
+1419745657 source:c:\users\corpus\desktop\learningcpp\leetcode\lru\src\lrucache.cpp
+	"LRUCache.h"
+

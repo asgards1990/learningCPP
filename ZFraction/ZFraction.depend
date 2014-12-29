@@ -10,3 +10,14 @@
 	"ZFraction.h"
 	<iostream>
 
+1417981141 source:c:\users\corpus\desktop\learningcpp\zfraction\main.cpp
+	<iostream>
+	"ZFraction.h"
+
+1417981141 c:\users\corpus\desktop\learningcpp\zfraction\include\zfraction.h
+	<iostream>
+
+1417981141 source:c:\users\corpus\desktop\learningcpp\zfraction\src\zfraction.cpp
+	"ZFraction.h"
+	<iostream>
+

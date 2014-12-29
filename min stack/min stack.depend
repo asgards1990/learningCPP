@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1419732780 source:c:\users\corpus\desktop\learningcpp\min stack\main.cpp
+	<iostream>
+	<deque>
+	<vector>
+	"MinStack.h"
+
+1419729880 c:\users\corpus\desktop\learningcpp\min stack\include\minstack.h
+	<deque>
+
+1419729656 source:c:\users\corpus\desktop\learningcpp\min stack\src\minstack.cpp
+	"MinStack.h"
+
