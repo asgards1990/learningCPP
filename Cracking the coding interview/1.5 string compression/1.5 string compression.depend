@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1420255054 source:c:\users\corpus\desktop\learningcpp\cracking the coding interview\1.5 string compression\main.cpp
+	<iostream>
+	<string>
+	<sstream>
+

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1420312580 source:c:\users\corpus\desktop\learningcpp\cracking the coding interview\2.1 linked list duplicates removal\main.cpp
+	<iostream>
+	<list>
+	<array>
+	<vector>
+	<unordered_map>
+

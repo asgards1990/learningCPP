@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1420566075 source:c:\users\su.yang\desktop\n queens\main.cpp
+	<iostream>
+	<vector>
+	<string>
+

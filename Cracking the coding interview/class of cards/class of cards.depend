@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1420247132 source:c:\users\corpus\desktop\learningcpp\cracking the coding interview\class of cards\main.cpp
+	<iostream>
+	"Deck.h"
+
+1420247019 source:c:\users\corpus\desktop\learningcpp\cracking the coding interview\class of cards\src\deck.cpp
+	"Deck.h"
+
+1420247183 c:\users\corpus\desktop\learningcpp\cracking the coding interview\class of cards\include\deck.h
+	<iostream>
+	<vector>
+	<utility>
+
